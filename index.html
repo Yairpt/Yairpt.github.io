@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Yair Reichman</title>
-<meta name="description" content="Yair Reichman: Data Scientist | ML &amp; DL | Data &amp; Automation Engineer | Computational Materials &amp; Simulation. Experience, selected work, research, education and contact.">
+<meta name="description" content="Yair Reichman: Data Scientist | ML &amp; DL | Data &amp; Automation Engineer | Computational Materials &amp; Simulation. Experience, selected work, research, education, certifications and contact.">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Yair Reichman">
 <meta property="og:description" content="Data Scientist | ML &amp; DL | Data &amp; Automation Engineer | Computational Materials &amp; Simulation">
@@ -221,6 +221,13 @@ p{margin:0}
 .tl ul{margin:.9rem 0 0;padding-left:1.15rem;display:grid;gap:.5rem;color:var(--muted)}
 .tl li::marker{color:var(--accent)}
 .tl .lead{margin-top:.9rem;color:var(--muted)}
+/* several roles at one company (CV layout, 2026-11-25): roles nested under the company card */
+.roles{display:grid;gap:1.15rem;margin-top:1.1rem;padding-left:1rem;border-left:2px solid var(--accent-soft)}
+.role h4{margin:0;font-weight:500;font-size:1.15rem;line-height:1.3;display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem .75rem}
+.role-date{font-size:.85rem;font-weight:500;color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.tl .role ul{margin-top:.55rem}
+.tl .role .lead{margin-top:.4rem}
+.hero-text strong,.about-text strong,.tl li strong{color:var(--ink);font-weight:700}
 
 /* research */
 .research{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.5rem;align-items:stretch}
@@ -252,9 +259,13 @@ p{margin:0}
 .edu{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.5rem;display:flex;flex-direction:column;gap:.6rem}
 .edu h3{margin:.4rem 0 0;font-weight:500;font-size:1.2rem;line-height:1.3}
 .edu .org{margin:0}
+.edu .date{align-self:flex-start}
 .edu ul{margin:.3rem 0 0;padding-left:1.1rem;display:grid;gap:.4rem;color:var(--muted);font-size:.97rem}
 .edu li::marker{color:var(--accent)}
-@media (max-width:980px){.edu-grid{grid-template-columns:minmax(0,1fr)}}
+.edu-grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.edu-grid.cols-1{grid-template-columns:minmax(0,1fr);max-width:36rem;margin:0 auto}
+.head-sub{margin-top:clamp(2.5rem,5vw,3.5rem)}
+@media (max-width:980px){.edu-grid,.edu-grid.cols-2{grid-template-columns:minmax(0,1fr)}}
 
 /* skills */
 .skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
@@ -319,13 +330,12 @@ p{margin:0}
           <li>ML &amp; DL</li>
           <li>Computational Materials &amp; Simulation</li>
         </ul>
-        <p class="hero-text">At H₂Pro I have worked on physics-based modeling and numerical simulation of the electrolyzer and built software used on its production lines.</p>
+        <p class="hero-text">I build <strong>physics-based models</strong> and <strong>numerical simulations</strong> of multidisciplinary systems, analyze process data, apply <strong>machine learning</strong>, and develop software used on production lines.</p>
         <div class="hero-cta">
           <a class="btn" href="#contact">Get in touch</a>
           <a class="btn btn-ghost" href="Yair_Reichman_CV.pdf" download>Download CV</a>
         </div>
         <div class="hero-links">
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Yoqne'am Illit, Israel</span>
           <a href="mailto:yairpt@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>yairpt@gmail.com</a>
           <a href="https://www.linkedin.com/in/yairreichman/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>LinkedIn</a>
         </div>
@@ -378,14 +388,14 @@ p{margin:0}
     <div class="wrap about">
       <div>
         <h2 class="title" id="h-abt"><span>About me</span></h2>
-        <p class="about-text">Applied engineer with 4 years of engineering experience in industrial R&amp;D and manufacturing and an M.Sc. in computational materials engineering from the Technion.</p>
+        <p class="about-text"><strong>Applied engineer and data scientist</strong> with 4 years of industrial R&amp;D experience and a <strong>Technion M.Sc.</strong> in computational materials engineering.</p>
         <p class="about-text">Training in chemistry and scientific research helps me understand the processes behind the numbers.</p>
       </div>
       <ul class="checks">
         <li><span>M.Sc., Computational Materials Engineering &amp; Science, Technion</span></li>
         <li><span>First-author paper in <i>Advanced Theory and Simulations</i> (2023)</span></li>
-        <li><span>B.Sc., Chemistry &amp; Materials Engineering, Technion: GPA 87, KLA-Tencor scholarship for academic excellence</span></li>
-        <li><span>Hebrew (native), English (full professional proficiency)</span></li>
+        <li><span>B.Sc., Chemistry &amp; Materials Engineering, Technion: KLA-Tencor scholarship for academic excellence, Dean’s list, GPA 87</span></li>
+        <li><span>Hebrew (native), English (excellent)</span></li>
       </ul>
     </div>
   </section>
@@ -433,21 +443,22 @@ p{margin:0}
       <ol class="timeline">
         <li class="tl">
           <div class="tl-card">
-            <span class="date">Jan 2024 – Present</span>
-            <h3>Data &amp; Automation Engineer</h3>
-            <p class="org"><b>H₂Pro</b> · Green-hydrogen startup</p>
-            <p class="lead">The projects from this role are listed under <a href="#work">Selected work</a>.</p>
-          </div>
-        </li>
-        <li class="tl">
-          <div class="tl-card">
-            <span class="date">Oct 2022 – Jan 2024</span>
-            <h3>Simulation Engineer</h3>
-            <p class="org"><b>H₂Pro</b></p>
-            <ul>
-              <li>Built physics-based models of electrolyzer behavior (electrochemical, thermal, mass/energy balances) in MATLAB and Simulink/Simscape, and a kinetic Monte Carlo simulation of an anode-material phase transition.</li>
-              <li>Validated simulations against experimental measurements and tuned model parameters to study system sensitivities and operating constraints.</li>
-            </ul>
+            <span class="date">Oct 2022 – Present</span>
+            <h3>H₂Pro</h3>
+            <p class="org">A renewable-energy startup</p>
+            <div class="roles">
+              <div class="role">
+                <h4>Data &amp; Automation Engineer <span class="role-date">Jan 2024 – Present</span></h4>
+                <p class="lead">The projects from this role are listed under <a href="#work">Selected work</a>.</p>
+              </div>
+              <div class="role">
+                <h4>Simulation Engineer <span class="role-date">Oct 2022 – Jan 2024</span></h4>
+                <ul>
+                  <li>Built <strong>physics-based models</strong> of electrolyzer behavior (electrochemical, thermal, mass/energy balances) in MATLAB and Simulink/Simscape, and a kinetic Monte Carlo simulation of an anode-material phase transition.</li>
+                  <li>Validated simulations against experimental measurements and tuned model parameters to study system sensitivities and operating constraints.</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </li>
         <li class="tl">
@@ -502,16 +513,7 @@ p{margin:0}
       <div class="head">
         <h2 class="title" id="h-edu"><span>Education</span></h2>
       </div>
-      <div class="edu-grid">
-        <article class="edu">
-          <span class="date">Oct 2024 – Aug 2025</span>
-          <h3>Data Science Program</h3>
-          <p class="org"><b>Nebius Academy Israel (formerly YData)</b></p>
-          <ul>
-            <li>Intensive program covering statistics, classical ML and pipelines, deep learning (vision + NLP), and GenAI.</li>
-            <li>Capstone: compared deep-learning models (CrabNet, ElemNet) with gradient-boosting baselines on nearly 30,000 compounds from public materials databases.</li>
-          </ul>
-        </article>
+      <div class="edu-grid cols-2">
         <article class="edu">
           <span class="date">Oct 2020 – Oct 2022</span>
           <h3>M.Sc., Computational Materials Engineering &amp; Science</h3>
@@ -525,8 +527,23 @@ p{margin:0}
           <h3>B.Sc., Chemistry &amp; Materials Engineering</h3>
           <p class="org"><b>Technion</b></p>
           <ul>
-            <li>GPA: 87</li>
             <li>KLA-Tencor scholarship for academic excellence</li>
+            <li>Dean’s list academic excellence</li>
+            <li>GPA: 87</li>
+          </ul>
+        </article>
+      </div>
+      <div class="head head-sub">
+        <h2 class="title" id="h-cert"><span>Certifications</span></h2>
+      </div>
+      <div class="edu-grid cols-1">
+        <article class="edu">
+          <span class="date">Oct 2024 – Aug 2025</span>
+          <h3>Data Science Program</h3>
+          <p class="org"><b>Nebius Academy Israel (formerly YData)</b></p>
+          <ul>
+            <li>Intensive program covering statistics, classical ML and pipelines, deep learning (vision + NLP), and GenAI.</li>
+            <li>Capstone: compared deep-learning models (CrabNet, ElemNet) with gradient-boosting baselines on nearly 30,000 compounds from public materials databases.</li>
           </ul>
         </article>
       </div>
@@ -588,7 +605,6 @@ p{margin:0}
         <h3>Contact</h3>
         <ul>
           <li><a href="mailto:yairpt@gmail.com">yairpt@gmail.com</a></li>
-          <li>Yoqne'am Illit, Israel</li>
         </ul>
       </div>
       <div>
